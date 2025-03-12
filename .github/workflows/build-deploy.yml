@@ -1,38 +1,49 @@
-name: Build and Push Docker Image
+name: Deploy Docker Container to EC2
 
 on:
   push:
     branches:
-      - main # Or your main branch name
-      - lucas
-      - nikhil
-  workflow_dispatch: # Allows manual triggering
+      - main  # Trigger action on push to the main branch
 
 jobs:
-  build-and-push:
+  build-and-deploy:
+    name: Build, Push Docker Image, and Deploy to EC2
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
+      - name: Build Docker Image
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/echo-verse-client:latest .
+
+      - name: Push Docker Image to Docker Hub
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/echo-verse-client:latest
+
+  deploy-to-ec2:
+    name: Deploy to EC2 Instance
+    runs-on: ubuntu-latest
+    needs: build-and-deploy  # Ensure deployment runs after the Docker image is pushed
+
+    steps:
+      - name: SSH into EC2 and deploy Docker container
+        uses: appleboy/ssh-action@v0.1.10
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            # Stop and remove any old containers if they exist
+            docker stop echo-verse-client || true
+            docker rm echo-verse-client || true
 
-      - name: Build and push Docker image
-        id: docker_build
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${{ github.sha }}
-          # tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:latest #if you want to push latest tag.
+            # Pull the latest image from Docker Hub
+            docker pull ${{ secrets.DOCKER_USERNAME }}/echo-verse-client:latest
 
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+            # Run the container in detached mode
+            docker run -d -p 80:80 --name echo-verse-client ${{ secrets.DOCKER_USERNAME }}/echo-verse-client:latest
+
+            echo "Deployment completed successfully!"
