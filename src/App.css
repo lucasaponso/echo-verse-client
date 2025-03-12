@@ -68,6 +68,15 @@ body {
   color: rgb(0, 0, 0); /* Ensure the text color stands out */
 }
 
+/* Logo styling */
+.login-container img {
+  width: 325px; /* Resize logo width */
+  height: auto; /* Keep aspect ratio */
+  margin: 0 auto 13px; /* Reduce space below the logo */
+  padding: 0; /* Remove extra padding */
+  display: block; /* Center the image */
+}
+
 /* Form element styles */
 .login-container form div {
   margin-bottom: 15px;

@@ -19,7 +19,13 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
+      <img 
+  src="image.png" 
+  alt="example"
+  style={{ width: '300px', height: 'auto', margin: '0 auto -100px' }} 
+/>
+
+      <h2>Welcome</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <form onSubmit={handleSubmit}>
         <div>
