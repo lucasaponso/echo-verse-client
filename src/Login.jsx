@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -20,11 +21,10 @@ const Login = () => {
   return (
     <div className="login-container">
       <img 
-  src="image.png" 
-  alt="example"
-  style={{ width: '300px', height: 'auto', margin: '0 auto -100px' }} 
-/>
-
+        src="image.png" 
+        alt="example"
+        style={{ width: '300px', height: 'auto', margin: '0 auto -100px' }} 
+      />
       <h2>Welcome</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <form onSubmit={handleSubmit}>
@@ -32,7 +32,7 @@ const Login = () => {
           <input
             type="email"
             id="email"
-            placeholder='Email'
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -42,7 +42,7 @@ const Login = () => {
           <input
             type="password"
             id="password"
-            placeholder='Password'
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -52,8 +52,7 @@ const Login = () => {
       </form>
 
       <div className="links-container">
-        <a href="/forgot-password" className="forgot-password-link">Forgot Password?</a>
-        <a href="/register" className="register-link">Don't have an account? Register</a>
+        <Link to="/register" className="register-link">Don't have an account? Register</Link>
       </div>
     </div>
   );

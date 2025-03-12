@@ -92,6 +92,7 @@ body {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
+  margin-bottom: 2px; /* Apply consistent bottom margin to inputs */
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #ffffff; /* Light background for inputs */
@@ -115,6 +116,95 @@ body {
 
 /* Error message styling */
 .login-container p {
+  color: red;
+  font-size: 14px;
+}
+
+/* Links container styling */
+.links-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.links-container a {
+  display: block;
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.links-container a:hover {
+  color: #0056b3;
+}
+
+
+/* Register container */
+.register-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(24, 15, 15, 0.1);
+  background-color: #ffffff; /* Light background for the form */
+}
+
+/* Header style */
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0); /* Ensure the text color stands out */
+}
+
+/* Logo styling */
+.register-container img {
+  width: 325px; /* Resize logo width */
+  height: auto; /* Keep aspect ratio */
+  margin: 0 auto 13px; /* Reduce space below the logo */
+  padding: 0; /* Remove extra padding */
+  display: block; /* Center the image */
+}
+
+/* Form element styles */
+.register-container form div {
+  margin-bottom: 15px;
+}
+
+.register-container label {
+  display: block;
+  font-weight: bold;
+  color: white; /* Label text color */
+}
+
+.register-container input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 2px; /* Apply consistent bottom margin to inputs */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #ffffff; /* Light background for inputs */
+  color: #333; /* Dark text for readability */
+}
+
+.register-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.register-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Error message styling */
+.register-container p {
   color: red;
   font-size: 14px;
 }
