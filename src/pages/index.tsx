@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Navbar from "@/components/Navbar";
+import Subscriptions from "@/components/Subscriptions";
 
 import { Button, ButtonGroup } from '@chakra-ui/react'
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Button colorScheme='teal' size='xs'>Medium Button</Button>
         <Button colorScheme='blue' size='md'>Medium Button</Button> */}
         <Navbar></Navbar>
+        <Subscriptions></Subscriptions>
 
       </div>
 
