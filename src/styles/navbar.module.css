@@ -1,0 +1,42 @@
+.navbarcontainer {
+    /* Overall container for this component */
+    height: 150px;
+
+    display: flex;
+
+    background-color: #FFF;
+    border-bottom: 2px solid lightgray;
+
+    /* border: 2px solid red; */
+}
+
+.welcomecontainer {
+    /* Take up remaining space in navbar. */
+    flex-grow: 1;
+
+    /* To centre contents of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Format text. Replace with Chakra UI header */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4em;
+
+    /* border: 2px solid red; */
+}
+
+.logoutcontainer {
+    width: 80px;
+
+    /* To centre contents of container */
+    display: flex;
+    justify-content: center ;
+    padding-top: 10px;
+
+    /* Format text. Replace with Chakra UI header */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+
+    /* border: 2px solid red; */
+}
