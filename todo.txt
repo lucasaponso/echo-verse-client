@@ -1,0 +1,4 @@
+- Add register page.
+- Make the login page as the landing page.
+- Make Login a component.
+- Ensure all main areas of the website are components (e.g. footer, header and login).
