@@ -13,7 +13,7 @@
     /* Centers the cards in the cells of the grid. */
     justify-items: center;
 
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 /* Watch the following sections of the video to understand the grid:

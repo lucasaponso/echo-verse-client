@@ -13,8 +13,7 @@ export default function Search() {
     }
     return (
         <>
-            <div>Test</div>
-            <Heading as='h2' size='xl'>Looking for something?</Heading>
+            <Heading paddingTop={10} as='h2' size='xl'>Looking for something?</Heading>
             <p>Add search bar here. Consider using another component library like flowbite which has a search bar.</p>
             <FormControl>
                 <Button colorScheme='blue' onClick={onSubmitClick}>Search</Button>

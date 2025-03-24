@@ -11,8 +11,7 @@ export default function Subscriptions() {
 
     return (
         <>
-            <div>Test.</div>
-            <Heading as='h2' size='xl'>Your Subscriptions</Heading>
+            <Heading paddingTop={10} as='h2' size='xl'>Your Subscriptions</Heading>
 
             <Grid></Grid>
 

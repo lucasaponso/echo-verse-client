@@ -23,8 +23,8 @@ export default function Home() {
         <Button colorScheme='teal' size='xs'>Medium Button</Button>
         <Button colorScheme='blue' size='md'>Medium Button</Button> */}
         <Navbar></Navbar>
-        <Subscriptions></Subscriptions>
         <Search></Search>
+        <Subscriptions></Subscriptions>
 
       </div>
 
