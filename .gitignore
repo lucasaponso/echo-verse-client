@@ -30,3 +30,9 @@ dist-ssr
 /out/
 # typescript
 next-env.d.ts
+
+
+task1/.env
+task2/.env
+task2/__pycache__
+task1/__pycache__
