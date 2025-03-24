@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/styles/navbar.module.css"],"sourcesContent":[".navbarcontainer {\r\n    /* Overall container for this component */\r\n    height: 150px;\r\n\r\n    display: flex;\r\n\r\n    background-color: #FFF;\r\n    border-bottom: 2px solid lightgray;\r\n\r\n    /* border: 2px solid red; */\r\n}\r\n\r\n.welcomecontainer {\r\n    /* Take up remaining space in navbar. */\r\n    flex-grow: 1;\r\n\r\n    /* To centre contents of the container */\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n\r\n    /* Format text. Replace with Chakra UI header */\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 4em;\r\n\r\n    /* border: 2px solid red; */\r\n}\r\n\r\n.logoutcontainer {\r\n    width: 80px;\r\n\r\n    /* To centre contents of container */\r\n    display: flex;\r\n    justify-content: center ;\r\n    padding-top: 10px;\r\n\r\n    /* Format text. Replace with Chakra UI header */\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 1em;\r\n\r\n    /* border: 2px solid red; */\r\n}"],"names":[],"mappings":"AAAA;;;;;;;AAYA;;;;;;;;;AAgBA"}}]
-}

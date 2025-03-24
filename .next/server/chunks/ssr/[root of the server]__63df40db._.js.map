@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 25, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/nikhi/OneDrive/Desktop/Everything/University/Year4/Sem1/CloudComputing/Repo/echo-verse-client/src/pages/_app.tsx"],"sourcesContent":["import \"@/styles/globals.css\";\r\nimport type { AppProps } from \"next/app\";\r\nimport { ChakraProvider } from '@chakra-ui/react'\r\n\r\nexport default function App({ Component, pageProps }: AppProps) {\r\n  return (\r\n    <ChakraProvider>\r\n      <Component {...pageProps} />\r\n    </ChakraProvider>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;AAEA;;;;;;;;AAEe,SAAS,IAAI,EAAE,SAAS,EAAE,SAAS,EAAY;IAC5D,qBACE,qKAAC,8IAAA,CAAA,iBAAc;kBACb,cAAA,qKAAC;YAAW,GAAG,SAAS;;;;;;;;;;;AAG9B","debugId":null}}]
-}
