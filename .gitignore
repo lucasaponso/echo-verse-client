@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# ADDED THE FOLLOWING AFTER NEXT JS CONVERSION
+# Next JS
+/.next/
+/out/
+# typescript
+next-env.d.ts
