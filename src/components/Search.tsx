@@ -2,6 +2,8 @@ import { Button, FormControl, Heading } from '@chakra-ui/react';
 import styles from '../styles/search.module.css'
 import { ChangeEvent, useState } from 'react';
 
+import Grid from "@/components/Grid";
+
 export default function Search() {
 
     const [displayCards, setDisplayCards] = useState(false);
@@ -17,7 +19,7 @@ export default function Search() {
             <FormControl>
                 <Button colorScheme='blue' onClick={onSubmitClick}>Search</Button>
             </FormControl>
-            {displayCards===true && <h1>Here are the cards.</h1>}
+            {displayCards===true && <Grid></Grid>}
         </>
     );
 }
