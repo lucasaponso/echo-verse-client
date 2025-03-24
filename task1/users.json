@@ -1,0 +1,55 @@
+{
+    "users": [
+      {
+        "email": "s300@student.rmit.edu.au",
+        "user_name": "LucasAponso0",
+        "password": "012345"
+      },
+      {
+        "email": "s301@student.rmit.edu.au",
+        "user_name": "LucasAponso1",
+        "password": "password1"
+      },
+      {
+        "email": "s302@student.rmit.edu.au",
+        "user_name": "LucasAponso2",
+        "password": "password2"
+      },
+      {
+        "email": "s303@student.rmit.edu.au",
+        "user_name": "LucasAponso3",
+        "password": "password3"
+      },
+      {
+        "email": "s304@student.rmit.edu.au",
+        "user_name": "LucasAponso4",
+        "password": "password4"
+      },
+      {
+        "email": "s305@student.rmit.edu.au",
+        "user_name": "LucasAponso5",
+        "password": "password5"
+      },
+      {
+        "email": "s306@student.rmit.edu.au",
+        "user_name": "LucasAponso6",
+        "password": "password6"
+      },
+      {
+        "email": "s307@student.rmit.edu.au",
+        "user_name": "LucasAponso7",
+        "password": "password7"
+      },
+      {
+        "email": "s308@student.rmit.edu.au",
+        "user_name": "LucasAponso8",
+        "password": "password8"
+      },
+      {
+        "email": "s309@student.rmit.edu.au",
+        "user_name": "LucasAponso9",
+        "password": "password9"
+      }
+    ]
+  }
+  
