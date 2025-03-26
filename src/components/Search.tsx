@@ -6,11 +6,37 @@ import Grid from "@/components/Grid";
 
 export default function Search() {
 
+    // Display cards is for testing purposes, should not be in final.
     const [displayCards, setDisplayCards] = useState(false);
 
-    const onSubmitClick = () => {
+    const onClickDisplayCards = () => {
         setDisplayCards(true);
     }
+
+    
+
+    const [artist, setArtist] = useState("");
+    const [album, setAlbum] = useState("");
+    const [errorMsg, setErrorMsg] = useState("");
+
+    const onClickSearch = () => {
+        // Check if at least one of the four inputs have been entered.
+        if ((artist === "") && (album === "")) {
+            setErrorMsg("Please enter at least one input.");
+        }
+        else {
+            setErrorMsg("")
+        }
+    }
+
+    const handleInputArtist = (event: ChangeEvent<HTMLInputElement>) => {
+        setArtist(event.target.value);
+    }
+
+    const handleInputAlbum = (event: ChangeEvent<HTMLInputElement>) => {
+        setAlbum(event.target.value);
+    }
+
     return (
         <>
             <Heading paddingTop={10} as='h2' size='xl'>Looking for something?</Heading>
@@ -32,16 +58,22 @@ export default function Search() {
 
             <FormControl>
                 <FormLabel>Artist</FormLabel>
-                <Input maxWidth='300px'/>
+                <Input maxWidth='300px' value={artist} onChange={handleInputArtist}/>
             </FormControl>
 
             <FormControl>
                 <FormLabel>Album</FormLabel>
-                <Input maxWidth='300px'/>
+                <Input maxWidth='300px' value={album} onChange={handleInputAlbum}/>
             </FormControl>
 
             <FormControl>
-                <Button mt={5} colorScheme='blue' onClick={onSubmitClick}>Search</Button>
+                <Button mt={5} colorScheme='blue' onClick={onClickSearch}>Search</Button>
+            </FormControl>
+
+            <p>{errorMsg}</p>
+
+            <FormControl>
+                <Button mt={5} colorScheme='blue' onClick={onClickDisplayCards}>Display</Button>
             </FormControl>
             {displayCards===true && <Grid></Grid>}
         </>
