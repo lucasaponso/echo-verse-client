@@ -4,3 +4,4 @@
 - Ensure all main areas of the website are components (e.g. footer, header and login).
 - Merge all CSS files into a single file.
 - Decide on a theme and, if deemed necessary, create wireframes on Figma.
+- Add more than one row of dummy cards.

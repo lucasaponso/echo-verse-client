@@ -1,0 +1,23 @@
+.cardscontainer {
+    /* Creates a responsive grid. */
+    display: grid;
+    grid-template-rows: 600px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 600px;
+    
+    /* Centres the grid within this container. */
+    /* Doesn't seem to work for some reason. */
+    /* justify-content: center;
+    align-content: center; */
+
+    /* Centers the cards in the cells of the grid. */
+    justify-items: center;
+
+    /* border: 2px solid red; */
+}
+
+/* Watch the following sections of the video to understand the grid:
+4:33 grid auto rows
+9:54 justify-items and align items
+11:20 justify content and align content
+12:20 auto-fit */
